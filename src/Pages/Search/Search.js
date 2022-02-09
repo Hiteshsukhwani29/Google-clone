@@ -3,16 +3,25 @@ import { useHistory } from 'react-router-dom';
 import './Search.css';
 import SearchIcon from '@material-ui/icons/SearchOutlined';
 import MicIcon from '@material-ui/icons/Mic';
-import {Button} from '@material-ui/core'
+import {Button} from '@material-ui/core';
+import { actionType } from '../../reducer';
+import { useStateValue } from '../../Components/StateProvider';
 
-function Search({btns=false}) {
+function Search({btns}) {
 
+    
+    const [{},dispatch] = useStateValue();
     const [input, setInput] = useState('');
+
 
     const history = useHistory();
 
     const search = (e) =>{
         e.preventDefault();
+        dispatch({
+            type:actionType.Set_Search_Term,
+            text:input
+        })
         history.push('/search');
     }
 

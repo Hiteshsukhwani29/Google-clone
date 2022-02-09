@@ -27,7 +27,7 @@ function Home() {
             <div className='home-body'>
                 <img src='https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png'/>
                 <div className='home-body-search'>
-                    <Search/>
+                    <Search btns/>
                 </div>
             </div>  
         </div>
