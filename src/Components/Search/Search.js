@@ -5,7 +5,7 @@ import SearchIcon from '@material-ui/icons/SearchOutlined';
 import MicIcon from '@material-ui/icons/Mic';
 import {Button} from '@material-ui/core';
 import { actionType } from '../../reducer';
-import { useStateValue } from '../../Components/StateProvider';
+import { useStateValue } from '../StateProvider';
 
 function Search({btns}) {
 

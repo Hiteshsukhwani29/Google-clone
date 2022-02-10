@@ -2,18 +2,18 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Home from './Pages/Home/Home';
-import Search from './Pages/Search/Search';
+import SearchPage from './Pages/SearchPage/SearchPage';
 
 function App() {
   return (
     <div className="App">
       <Router>
         <Switch>
-          <Route path='/'>
+          <Route exact path='/'>
             <Home/>
           </Route>
-          <Route path='/search'>
-            <Search btns/>
+          <Route exact path='/search'>
+            <SearchPage/>
           </Route>
         </Switch>
       </Router>

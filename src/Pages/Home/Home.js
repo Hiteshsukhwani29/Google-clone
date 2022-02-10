@@ -3,7 +3,7 @@ import './Home.css';
 import MoreAppsIcon from '@material-ui/icons/Apps';
 import { Link } from 'react-router-dom';
 import { Avatar } from '@material-ui/core';
-import Search from '../Search/Search';
+import Search from '../../Components/Search/Search';
 
 function Home() {
     return (
