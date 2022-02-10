@@ -5,6 +5,7 @@ import Home from './Pages/Home/Home';
 import SearchPage from './Pages/SearchPage/SearchPage';
 
 function App() {
+
   return (
     <div className="App">
       <Router>
