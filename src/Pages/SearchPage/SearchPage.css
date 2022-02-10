@@ -1,0 +1,27 @@
+.searchpage-header{
+    position: sticky;
+    top: 0;
+    display: flex;
+    background-color: #ffffff;
+    z-index: 10;
+    align-items: flex-start;
+    padding: 30px 30px 10px 30px;
+    border-bottom: 1px solid lightgray;
+}
+
+.searchpage-header > a{
+    margin: 0;
+}
+
+.searchpage-logo{
+    object-fit: contain;
+    height: 50px;
+    margin-right: 50px;
+}
+
+.searchpage-searchbox > .search > .search-box {
+    margin-top: 0;
+    width: unset;
+    max-width: unset;
+    margin: unset;
+}
