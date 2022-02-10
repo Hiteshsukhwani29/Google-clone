@@ -44,19 +44,32 @@
     margin: 40px 0px;
 }
 
-.searchpage-result > a{
-    margin: 0;
+.searchpage-result-url{
+    margin: 0px;
     font-size: 14px;
     color: #202124;
 }
 
+.searchpage-result-url:hover{
+    text-decoration: none;
+}
+
 .searchpage-result-title{
     font-weight: 500;
-    color: #1a0dab !important;
     padding-top: 5px;
-    margin-bottom: 3px;
+    color: #1a0dab !important;
+    padding-bottom: 8px;
     font-size: 20px !important;
     font-family: arial,sans-serif;
+}
+
+.searchpage-result-title:hover{
+    text-decoration: underline;
+    text-decoration-color: #1a0dab;
+}
+
+.searchpage-result-title:hover{
+    text-decoration-color: #1a0dab !important;
 }
 
 .searchpage-result-desc{
@@ -66,4 +79,5 @@
     font-size: 14px;
     font-family: arial,sans-serif;
     font-weight: normal;
+    margin-top: -20px;
 }

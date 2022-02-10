@@ -10,13 +10,12 @@ import SearchPageOptions from './SearchPageOptions';
 function SearchPage() {
 
   const [{ text }, dispatch] = useStateValue();
-  //const { data } = useGoogleSearch(text);
-  //const apikey = process.env.REACT_APP_CUSTOM_SEARCH_API
+  const { data } = useGoogleSearch(text);
 
-  const data = Response;
+  //const data = Response;
 
   console.log(data);
-  //console.log(apikey);
+  
   return (
     <div className='searchpage'>
       <div className='searchpage-header'>
@@ -29,27 +28,25 @@ function SearchPage() {
         </div>
       </div>
 
-      {true && (
+      {text && (
         <div className='searchpage-results'>
-          <p class="searchpage-results-stats">
-            {`About ${data.searchInformation.formattedTotalResults} results (${data.searchInformation.formattedSearchTime} seconds)`}
+          <p className="searchpage-results-stats">
+            {`About ${data?.searchInformation.formattedTotalResults} results (${data?.searchInformation.formattedSearchTime} seconds)`}
           </p>
 
-          {data.items.map(item => (
+          {data?.items.map(item => (
             <div className='searchpage-result'>
-              <a href={item.link}>{item.displayLink}</a>
-              <br/>
-              <a className='searchpage-result-title' href={item.link}><span>{item.title}</span></a>
-              <br/>
-              <span className='searchpage-result-desc'>{item.snippet}</span>
-              </div>
+              <a className='searchpage-result-url' href={item.link}>{item.displayLink}</a>
+              <a href={item.link}><div className='searchpage-result-title'>{item.title}</div></a>
+              <div className='searchpage-result-desc'>{item.snippet}</div>
+            </div>
           )
           )}
 
         </div>
       )}
-      </div>
-      )
+    </div>
+  )
 }
 
-      export default SearchPage
+export default SearchPage
