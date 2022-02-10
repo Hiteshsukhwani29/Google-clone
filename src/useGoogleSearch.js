@@ -8,8 +8,10 @@ const useGoogleSearch = (text) =>{
           fetch(
               `https://www.googleapis.com/customsearch/v1?key=${process.env.CUSTOM_SEARCH_API}&cx=e0bd641ae53f93d6d&q=${text}`
           )
+          .then(response=>response.json)
+          .then(result=>{setdata(result)})
       }
-    
+      fetchdata();
     }, [text])
     
     return {data}
