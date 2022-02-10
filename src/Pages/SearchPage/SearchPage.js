@@ -25,16 +25,31 @@ function SearchPage() {
         </Link>
         <div className='searchpage-searchbox'>
           <Search />
-          <SearchPageOptions/>
+          <SearchPageOptions />
         </div>
       </div>
 
+      {true && (
+        <div className='searchpage-results'>
+          <p class="searchpage-results-stats">
+            {`About ${data.searchInformation.formattedTotalResults} results (${data.searchInformation.formattedSearchTime} seconds)`}
+          </p>
 
-      <div className='searchpage-results'>
+          {data.items.map(item => (
+            <div className='searchpage-result'>
+              <a href={item.link}>{item.displayLink}</a>
+              <br/>
+              <a className='searchpage-result-title' href={item.link}><span>{item.title}</span></a>
+              <br/>
+              <span className='searchpage-result-desc'>{item.snippet}</span>
+              </div>
+          )
+          )}
 
+        </div>
+      )}
       </div>
-    </div>
-  )
+      )
 }
 
-export default SearchPage
+      export default SearchPage

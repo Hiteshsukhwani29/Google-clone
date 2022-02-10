@@ -25,3 +25,45 @@
     max-width: unset;
     margin: unset;
 }
+
+
+.searchpage-results{
+    max-width: 650px;
+    margin-top: 20px;
+    margin-left: 240px;
+    margin-bottom: 100px;
+}
+
+.searchpage-results-stats{
+    font-family: Google Sans,arial,sans-serif;
+    color: #70757a;
+    font-size: 14px;
+}
+
+.searchpage-result{
+    margin: 40px 0px;
+}
+
+.searchpage-result > a{
+    margin: 0;
+    font-size: 14px;
+    color: #202124;
+}
+
+.searchpage-result-title{
+    font-weight: 500;
+    color: #1a0dab !important;
+    padding-top: 5px;
+    margin-bottom: 3px;
+    font-size: 20px !important;
+    font-family: arial,sans-serif;
+}
+
+.searchpage-result-desc{
+    color: #4d5156;
+    line-height: 1.58;
+    word-wrap: break-word;
+    font-size: 14px;
+    font-family: arial,sans-serif;
+    font-weight: normal;
+}
